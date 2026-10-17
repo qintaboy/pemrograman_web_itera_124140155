@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Tugas Kuliah</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- ===== HEADER: sapaan, jam, kutipan ===== -->
+  <header class="header">
+    <div class="header-isi">
+      <div>
+        <p class="sapaan" id="sapaan">Halo!</p>
+        <h1>Dashboard Tugas Kuliah</h1>
+        <p class="tanggal" id="tanggal">-</p>
+      </div>
+      <p class="jam" id="jam">--:--</p>
+    </div>
+
+    <figure class="kutipan">
+      <blockquote id="kutipan-teks">Memuat kutipan...</blockquote>
+      <figcaption>
+        <span id="kutipan-penulis"></span>
+        <button type="button" class="btn-teks" id="btn-kutipan">Kutipan lain</button>
+      </figcaption>
+    </figure>
+  </header>
+
+  <main class="container">
+    <!-- ===== RINGKASAN ===== -->
+    <section class="statistik" id="statistik"></section>
+
+    <div class="grid">
+      <!-- ===== KOLOM KIRI: form + cuaca ===== -->
+      <div class="kolom">
+        <section class="card">
+          <h2 id="judul-form">Tambah Tugas</h2>
+
+          <form id="form-tugas" novalidate>
+            <div class="field">
+              <label for="input-judul">Nama Tugas</label>
+              <input type="text" id="input-judul" placeholder="Contoh: Laporan Praktikum PAW">
+              <p class="error" id="error-judul"></p>
+            </div>
+
+            <div class="field">
+              <label for="input-matkul">Mata Kuliah</label>
+              <input type="text" id="input-matkul" placeholder="Contoh: Pengembangan Aplikasi Web">
+              <p class="error" id="error-matkul"></p>
+            </div>
+
+            <div class="field-baris">
+              <div class="field">
+                <label for="input-deadline">Deadline</label>
+                <input type="date" id="input-deadline">
+                <p class="error" id="error-deadline"></p>
+              </div>
+
+              <div class="field">
+                <label for="input-prioritas">Prioritas</label>
+                <select id="input-prioritas">
+                  <option value="tinggi">Tinggi</option>
+                  <option value="sedang" selected>Sedang</option>
+                  <option value="rendah">Rendah</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="aksi-form">
+              <button type="submit" class="btn btn-utama" id="btn-simpan">Tambah Tugas</button>
+              <button type="button" class="btn btn-garis" id="btn-batal" hidden>Batal</button>
+            </div>
+          </form>
+        </section>
+
+        <section class="card cuaca">
+          <div class="card-head">
+            <h2>Cuaca Kampus</h2>
+            <button type="button" class="btn-teks" id="btn-cuaca">Perbarui</button>
+          </div>
+          <div id="cuaca-isi">Memuat cuaca...</div>
+        </section>
+      </div>
+
+      <!-- ===== KOLOM KANAN: daftar tugas ===== -->
+      <section class="card">
+        <div class="card-head">
+          <h2>Daftar Tugas</h2>
+          <div class="filter" id="filter">
+            <button type="button" class="chip aktif" data-filter="semua">Semua</button>
+            <button type="button" class="chip" data-filter="belum">Belum</button>
+            <button type="button" class="chip" data-filter="selesai">Selesai</button>
+          </div>
+        </div>
+
+        <!-- Isi daftar dibuat oleh JavaScript (DashboardApp.renderTugas) -->
+        <ul class="daftar" id="daftar-tugas"></ul>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    Qinthafa Treza Aimar &middot; 124140155 &middot; Praktikum PAW Kelas RA
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
