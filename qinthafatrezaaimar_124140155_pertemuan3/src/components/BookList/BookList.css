@@ -1,0 +1,13 @@
+.book-list {
+  list-style: none;
+  display: grid;
+  gap: 10px;
+}
+
+.book-list-kosong {
+  text-align: center;
+  color: var(--teks-redup);
+  padding: 32px 12px;
+  border: 1px dashed #d6d3d1;
+  border-radius: 8px;
+}

@@ -1,0 +1,45 @@
+.book-filter {
+  display: grid;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.book-filter-cari {
+  width: 100%;
+  padding: 9px 12px;
+  border: 1px solid #d6d3d1;
+  border-radius: 6px;
+}
+
+.book-filter-cari:focus {
+  outline: 2px solid var(--utama);
+  outline-offset: 1px;
+}
+
+.book-filter-status {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.book-filter-chip {
+  border: 1px solid var(--garis);
+  background: #ffffff;
+  color: var(--teks-redup);
+  border-radius: 999px;
+  padding: 5px 12px;
+  font-size: 0.85rem;
+}
+
+.book-filter-chip.aktif {
+  background: var(--utama-muda);
+  border-color: var(--utama);
+  color: var(--utama);
+  font-weight: 600;
+}
+
+.book-filter-jumlah {
+  margin-left: 6px;
+  font-size: 0.78rem;
+  opacity: 0.8;
+}

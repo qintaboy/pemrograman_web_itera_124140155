@@ -1,0 +1,59 @@
+.navbar {
+  background: var(--utama);
+  color: #ffffff;
+}
+
+.navbar-isi {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 14px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.navbar-logo {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.navbar-menu {
+  display: flex;
+  gap: 6px;
+}
+
+.navbar-link {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  opacity: 0.85;
+  font-weight: 600;
+}
+
+.navbar-link:hover {
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* Halaman yang sedang aktif */
+.navbar-link.active {
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.navbar-jumlah {
+  display: inline-block;
+  min-width: 22px;
+  margin-left: 4px;
+  padding: 0 6px;
+  border-radius: 999px;
+  background: #ffffff;
+  color: var(--utama);
+  font-size: 0.78rem;
+  text-align: center;
+}

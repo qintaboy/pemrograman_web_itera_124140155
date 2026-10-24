@@ -1,0 +1,106 @@
+.stats-kartu {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+  gap: 20px;
+  align-items: start;
+}
+
+.stats-grid h2 {
+  font-size: 1.1rem;
+  margin-bottom: 14px;
+}
+
+.stats-bar-daftar {
+  list-style: none;
+  display: grid;
+  gap: 14px;
+}
+
+.stats-bar-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+  font-size: 0.88rem;
+  color: var(--teks-redup);
+}
+
+.stats-bar {
+  height: 10px;
+  background: var(--latar);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.stats-bar-isi {
+  height: 100%;
+  border-radius: 999px;
+}
+
+.stats-bar-milik {
+  background: var(--status-milik);
+}
+
+.stats-bar-baca {
+  background: var(--status-baca);
+}
+
+.stats-bar-beli {
+  background: var(--status-beli);
+}
+
+.stats-catatan {
+  margin-top: 16px;
+  font-size: 0.88rem;
+  color: var(--teks-redup);
+}
+
+.stats-penulis {
+  padding-left: 20px;
+  display: grid;
+  gap: 8px;
+}
+
+.stats-penulis li {
+  padding-left: 4px;
+}
+
+.stats-penulis li span:first-child {
+  font-weight: 600;
+}
+
+.stats-penulis-jumlah {
+  float: right;
+  color: var(--teks-redup);
+  font-size: 0.88rem;
+}
+
+.stats-kosong {
+  text-align: center;
+  display: grid;
+  gap: 12px;
+  justify-items: center;
+  padding: 32px 20px;
+  color: var(--teks-redup);
+}
+
+.stats-kosong .btn {
+  text-decoration: none;
+}
+
+@media (max-width: 820px) {
+  .stats-kartu {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .stats-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
